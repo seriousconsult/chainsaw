@@ -27,7 +27,6 @@ try:
 
     #### settings
     ###______________________________________________________________________________________
-    session.set_upper_follower_count(limit= 9999100)
     session.set_do_comment(True, percentage=1)
     session.set_comments(['Good vibes!','I appreicate you posting this!','Keep it up. I like the feed.','Nice feel to it .','Me gusta este estilo.','Good vibes.  I like it.', 'Nice feel, I do like it a lot!','Please keep up the postings!'],media='Photo')
     session.set_dont_include(['nerdywhatsits','ladybellfarms'])

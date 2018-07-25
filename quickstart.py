@@ -20,14 +20,13 @@ insta_password = insta_secret[1]
 
 #time.sleep(28219)# hours long pause
 
-
 try:
+
     session = InstaPy(username=insta_username, password=insta_password)
     session.login()
 
     #### settings
     ###______________________________________________________________________________________
-    session.set_upper_follower_count(limit= 12100)
     session.set_do_comment(True, percentage=1)
     session.set_comments(['Good vibe!','Thank you for posting this!','I like your feed. Keep it up.','Nice feel to this.',' Me gusta este estilo','Good vibe in this one.', 'Nice feel, I do like it a lot!'],media='Photo')
     session.set_dont_include(['nerdywhatsits','ladybellfarms'])
@@ -55,7 +54,7 @@ try:
     ###______________________________________________________________________________________
 
     # session.follow_user_followers not working 2018 July 24
-    #session.follow_user_followers(['lionsroarbuddhism','gypsyon__','ellakociuba','jo.kurth','kumpulainentomi'], amount=3, randomize=True, interact=True, sleep_delay=random.randint(151,285))
+    session.follow_user_followers(['lionsroarbuddhism','gypsyon__','ellakociuba','jo.kurth','kumpulainentomi'], amount=3, randomize=True, interact=True, sleep_delay=random.randint(151,285))
     i = 0
     while i < 21:
         i=i+1
