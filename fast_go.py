@@ -37,7 +37,7 @@ try:
     # searches the description and owner comments for the given words and won't like the image if one of the words are in there
     session.set_dont_like(['trump', 'bernie','Delhi','snowden','sanjay', 'hate', 'china','republican','democrat','football',
 	'Ethopia','church','superbowl','christ','jesus','bible','heaven','sinner', 'repost', 'iphone','virgin',
-	'india','god','sale','pizza','realtor','islamic','mosque','hindi','tactical','sponsored','weed','nsfw','via:'])
+	'india','god','sale','pizza','realtor','islamic','mosque','hindi','tactical','sponsored','weed','nsfw','via:','elephants','virgin '])
 
     #  3 per user likes
     session.set_user_interact(amount=random.randint(1,3), randomize=True, percentage=random.randint(30,50), media='Photo')
@@ -63,7 +63,7 @@ try:
     # certain post and likes a given number of his pictures, then returns to feed
     #session.follow_user_followers(['lionsroarbuddhism','gypsyon__','ellakociuba','jo.kurth','kumpulainentomi'], amount=3, randomize=True, interact=True, sleep_delay=random.randint(151,285))
     i = 0
-    while i < 19:
+    while i < 20:
         i=i+1
         print "round... " + str(i)
         number_of_followers_to_like = random.randint(4,7)

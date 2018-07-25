@@ -62,7 +62,7 @@ try:
         print "round... " + str(i)
         number_of_followers_to_like = random.randint(3,10)
     	number_of_throwoffs_to_like = random.randint(1,5)
-        throw_off_sleep = random.randint(6, 12)#seconds
+        throw_off_sleep = random.randint(6, 112)#seconds
         session.like_by_feed(amount=number_of_followers_to_like, randomize=True, unfollow=False, interact=False)
         session.like_by_tags([random.choice(my_hashtags)], amount=number_of_throwoffs_to_like, media='Photo')
         session.like_by_feed(amount=number_of_followers_to_like, randomize=True, unfollow=False, interact=False)
