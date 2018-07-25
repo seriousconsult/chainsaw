@@ -586,10 +586,16 @@ def like_image(browser, username, blacklist, logger):
         "//a[@role='button']/span[text()='Like']/..")
     liked_elem = browser.find_elements_by_xpath(
         "//a[@role='button']/span[text()='Unlike']")
-    '''
+    
     #sc added 2018 July 4 Like was not working , not finding the correct path to the heart
     like_elem = browser.find_elements_by_xpath("//span[text()='Like']")
     liked_elem = browser.find_elements_by_xpath("//span[text()='Unlike']")
+    '''
+    #sc added 2018 July 24 Like was not working , not finding the correct path to the heart
+    like_elem = browser.find_elements_by_xpath("//span[@aria-label='Like']")
+    liked_elem = browser.find_elements_by_xpath("//span[@aria-label='Unlike']")
+
+
 
     if len(like_elem) == 1:
         # sleep real quick right before clicking the element

@@ -440,16 +440,22 @@ def follow_through_dialog(browser,
         amount = amount * 3
 
     # find dialog box
-    dialog = browser.find_element_by_xpath(
-      "//div[text()='Followers' or text()='Following']/following-sibling::div")
+    #sc changed 2018 July 24
+    #dialog = browser.find_element_by_xpath("//div[text()='Followers' or text()='Following']/following-sibling::div")
+    #sc added 2018 July 24
+    #this code doesn't work yet
+    dialog = browser.find_element_by_xpath("//div[text() ='Followers']")    
+
 
     # scroll down the page
     scroll_bottom(browser, dialog, allfollowing)
 
     # get follow buttons. This approch will find the follow buttons and
     # ignore the Unfollow/Requested buttons.
-    follow_buttons = dialog.find_elements_by_xpath(
-        "//div/div/span/button[text()='Follow']")
+    #sc changed 2018 July 24
+    #follow_buttons = dialog.find_elements_by_xpath("//div/div/span/button[text()='Follow']")
+    #added this instead
+    follow_buttons = dialog.find_elements_by_xpath("//button[@innerstringmarker='Follow']")	
 
     person_list = []
     abort = False
@@ -475,6 +481,7 @@ def follow_through_dialog(browser,
                                    .find_elements_by_tag_name("a")[1].text)
             except IndexError:
                 pass  # Element list is too short to have a [1] element
+      
 
     if amount >= total_list:
         amount = total_list
@@ -485,6 +492,12 @@ def follow_through_dialog(browser,
     try:
         hasSlept = False
         btnPerson = list(zip(follow_buttons, person_list))
+       
+        #sc added 2018 July 24
+        #buttons are not being found and sucessfully added to the button list
+        print(len(follow_buttons))
+
+
         if randomize:
             sample = random.sample(range(0, len(follow_buttons)), real_amount)
             finalBtnPerson = []

@@ -29,7 +29,7 @@ try:
     ###______________________________________________________________________________________
     session.set_upper_follower_count(limit= 9999100)
     session.set_do_comment(True, percentage=1)
-    session.set_comments(['Good vibe!','Thank you for posting this!','I like your feed. Keep it up.','Nice feel to this.',' Me gusta este estilo','Good vibe in this one.', 'Nice feel, I do like it a lot!'],media='Photo')
+    session.set_comments(['Good vibes!','I appreicate you posting this!','Keep it up. I like the feed.','Nice feel to it .','Me gusta este estilo.','Good vibes.  I like it.', 'Nice feel, I do like it a lot!','Please keep up the postings!'],media='Photo')
     session.set_dont_include(['nerdywhatsits','ladybellfarms'])
     # completely ignore liking images from certain users
     session.set_ignore_users(['cathy_rudis_mccammack', 'shellyclark434', 'natalia_seliverstova_a', 	'gustaevirgin_hair','canteeqwardrobe','hajarjahanam.official','droneactionnation','vdorotheaswanepoelbiles','marshall_alpha'])

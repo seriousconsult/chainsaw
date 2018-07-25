@@ -54,21 +54,15 @@ try:
     #### actions
     ###______________________________________________________________________________________
 
-
-    # This is used to perform likes on your own feeds
-    # amount=100  specifies how many total likes you want to perform
-    # randomize=True randomly skips posts to be liked on your feed
-    # unfollow=True unfollows the author of a post which was considered
-    # inappropriate interact=True visits the author's profile page of a
-    # certain post and likes a given number of his pictures, then returns to feed
-    session.follow_user_followers(['lionsroarbuddhism','gypsyon__','ellakociuba','jo.kurth','kumpulainentomi'], amount=3, randomize=True, interact=True, sleep_delay=random.randint(151,285))
+    # session.follow_user_followers not working 2018 July 24
+    #session.follow_user_followers(['lionsroarbuddhism','gypsyon__','ellakociuba','jo.kurth','kumpulainentomi'], amount=3, randomize=True, interact=True, sleep_delay=random.randint(151,285))
     i = 0
-    while i < 20:
+    while i < 21:
         i=i+1
         print "round... " + str(i)
-        number_of_followers_to_like = random.randint(3,9)
+        number_of_followers_to_like = random.randint(3,10)
     	number_of_throwoffs_to_like = random.randint(1,5)
-        throw_off_sleep = random.randint(20, 120)#seconds
+        throw_off_sleep = random.randint(6, 12)#seconds
         session.like_by_feed(amount=number_of_followers_to_like, randomize=True, unfollow=False, interact=False)
         session.like_by_tags([random.choice(my_hashtags)], amount=number_of_throwoffs_to_like, media='Photo')
         session.like_by_feed(amount=number_of_followers_to_like, randomize=True, unfollow=False, interact=False)
