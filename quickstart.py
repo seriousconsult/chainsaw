@@ -56,7 +56,7 @@ try:
     # session.follow_user_followers not working 2018 July 24
     session.follow_user_followers(['lionsroarbuddhism','gypsyon__','ellakociuba','jo.kurth','kumpulainentomi'], amount=3, randomize=True, interact=True, sleep_delay=random.randint(151,285))
     i = 0
-    while i < 21:
+    while i < 5:
         i=i+1
         print "round... " + str(i)
         number_of_followers_to_like = random.randint(3,10)

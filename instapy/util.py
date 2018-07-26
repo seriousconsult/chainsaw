@@ -68,6 +68,7 @@ def validate_username(browser,
                 "---> {} is in blacklist  ~skipping user\n".format(username)
     
     """Checks the potential of target user by relationship status in order to delimit actions within the desired boundary"""
+    """ 
     if potency_ratio or delimit_by_numbers and (max_followers or max_following or min_followers or min_following):
 
         relationship_ratio = None
@@ -124,7 +125,7 @@ def validate_username(browser,
                             username, "potential user" if not reverse_relationship else "massive follower",
                             float("{0:.2f}".format(relationship_ratio)))
 
-
+    """
     # if everything ok
     return True, "Valid user"
 

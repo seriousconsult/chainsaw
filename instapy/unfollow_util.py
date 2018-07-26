@@ -107,7 +107,7 @@ def unfollow(browser,
              logfolder):
 
     """ Unfollows the given amount of users"""
-
+    """
     if (customList is not None and
         type(customList) in [tuple, list] and
             len(customList) == 3 and
@@ -169,7 +169,7 @@ def unfollow(browser,
 
         elif nonFollowers == True:
             logger.info("Unfollowing the users who do not follow back\n")
-            """  Unfollow only the users who do not follow you back """
+            # Unfollow only the users who do not follow you back
             unfollow_list = get_nonfollowers(browser,
                                               username,
                                                relationship_data,
@@ -471,7 +471,8 @@ def unfollow(browser,
         logger.info("Please select a proper unfollow method!  ~leaving unfollow activity\n")
 
     return unfollowNum
-
+    """
+    return 0
 
 def follow_user(browser, follow_restrict, login, user_name, blacklist, logger, logfolder):
     """Follows the user of the currently opened image"""
@@ -518,7 +519,7 @@ def follow_user(browser, follow_restrict, login, user_name, blacklist, logger, l
 
 def unfollow_user(browser, username, person, relationship_data, logger, logfolder):
     """Unfollows the user of the currently opened image"""
-
+    """
     try:
         unfollow_button = browser.find_element_by_xpath(
             "//*[text()='Following' or text()='Requested']")
@@ -539,8 +540,8 @@ def unfollow_user(browser, username, person, relationship_data, logger, logfolde
 
         update_activity('unfollows')
         sleep(3)
-
-        return 1
+    """
+    return 1
 
 
 def follow_given_user(browser,
